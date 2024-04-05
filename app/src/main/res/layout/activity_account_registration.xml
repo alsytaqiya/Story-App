@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userinterface.registerofmystoryapp.AccountRegistration">
+
+    <ImageView
+        android:id="@+id/ChibiMarukoChan1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/happy_chibby"
+        android:src="@drawable/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_register"
+        style="@style/TextContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="14dp"
+        android:text="@string/registration_page"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ChibiMarukoChan1" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edit_user_name"
+        style="@style/TextContent.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="14dp"
+        android:drawableStart="@drawable/ic_person"
+        android:drawablePadding="12dp"
+        android:hint="@string/name"
+        android:minHeight="46dp"
+        android:paddingStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_register"
+        app:layout_constraintStart_toStartOf="@+id/text_view_register"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_register"
+        tools:ignore="RtlSymmetry" />
+
+
+    <com.dicoding.picodiploma.storyappsubmission.userinterface.customviewofmystoryapp.EditTheInputText
+        android:id="@+id/name_of_user_in_registration"
+        style="@style/TextContent.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="14dp"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="12dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:minHeight="46dp"
+        android:paddingStart="12dp"
+        android:textAlignment="viewStart"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_user_name"
+        app:layout_constraintStart_toStartOf="@+id/edit_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/edit_user_name"
+        tools:ignore="MissingConstraints,NotSibling,RtlSymmetry" />
+
+
+    <com.dicoding.picodiploma.storyappsubmission.userinterface.customviewofmystoryapp.PasswordInputText
+        android:id="@+id/user_password"
+        style="@style/TextContent.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="14dp"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="12dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:minHeight="46dp"
+        android:paddingStart="12dp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="@+id/name_of_user_in_registration"
+        app:layout_constraintStart_toStartOf="@+id/name_of_user_in_registration"
+        app:layout_constraintTop_toBottomOf="@+id/name_of_user_in_registration"
+        tools:ignore="MissingConstraints,RtlSymmetry" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonRegistrationAccount"
+        style="@style/ButtonPrimary"
+        android:layout_gravity="center"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="14dp"
+        android:gravity="center"
+        android:text="@string/registration_button"
+        app:layout_constraintEnd_toEndOf="@+id/user_password"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="@+id/user_password"
+        app:layout_constraintTop_toBottomOf="@+id/user_password" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_register"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

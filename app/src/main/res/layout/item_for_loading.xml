@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/error_disconnected_warning"
+        style="@style/TextContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:text="@string/disconnected_warning"
+        android:textAlignment="center"
+        android:textColor="?android:textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/item_progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/error_disconnected_warning"
+        app:layout_constraintStart_toStartOf="@+id/error_disconnected_warning"
+        app:layout_constraintTop_toBottomOf="@+id/error_disconnected_warning"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/retry_button"
+        style="@style/TextContent.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="62dp"
+        android:text="@string/retry_application"
+        app:layout_constraintEnd_toEndOf="@+id/item_progress_bar"
+        app:layout_constraintStart_toStartOf="@+id/item_progress_bar"
+        app:layout_constraintTop_toBottomOf="@+id/item_progress_bar"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

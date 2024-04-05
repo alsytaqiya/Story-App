@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userinterface.addingstoryofmine.AddStoryOfMine">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_add_story"
+        style="@style/card"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/TextTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"
+            android:gravity="center_vertical|start"
+            android:text="@string/add_story"
+            android:textColor="@color/toolbar" />
+
+        <ImageButton
+            android:id="@+id/btn_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/ic_settings"
+            android:contentDescription="@string/image_button"
+            android:padding="22dp"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center_vertical|start"
+        android:text="@string/spill_your_story"
+        android:textColor="@color/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/card_view_add_story"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_add_story" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/photo_of_user"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="14dp"
+        android:clickable="true"
+        android:contentDescription="@string/preview_image_user"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_add_story"
+        app:srcCompat="@drawable/ic_image_60" />
+
+
+    <LinearLayout
+        android:id="@+id/linearlayoutcamlerry"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/photo_of_user">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_camera"
+            style="@style/ButtonPrimary"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_camera_alt"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/camera"
+            android:textColor="@color/purple_500"
+            tools:ignore="MissingConstraints,RtlHardcoded" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_gallery"
+            style="@style/ButtonSecondary"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_image"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/gallery"
+            android:textColor="@color/purple_500"
+            app:layout_constraintEnd_toEndOf="@+id/button_gallery"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toEndOf="@+id/input_a_location"
+            app:layout_constraintTop_toBottomOf="@+id/button_gallery"
+            tools:ignore="MissingConstraints,RtlHardcoded" />
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_a_description"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="14dp"
+        android:hint="@string/description"
+        app:boxCornerRadiusBottomEnd="26dp"
+        app:boxCornerRadiusBottomStart="26dp"
+        app:boxCornerRadiusTopEnd="26dp"
+        app:boxCornerRadiusTopStart="26dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayoutcamlerry">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/description_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            app:boxCornerRadiusBottomEnd="26dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="26dp"
+            app:boxCornerRadiusTopStart="26dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/upload_a_story"
+        style="@style/ButtonPrimary"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_rectangle"
+        android:drawableStart="@drawable/ic_upload"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_a_description"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_add_story"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+

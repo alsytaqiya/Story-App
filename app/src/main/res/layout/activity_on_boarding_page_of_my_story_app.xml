@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.login"
+    app:layoutDescription="@xml/activity_on_boarding_page_of_my_story_app_scene"
+    tools:context=".userinterface.onboardingpageofmystoryapp.OnBoardingPageOfMyStoryApp">
+
+    <ImageView
+        android:id="@+id/image_view_onboarding"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:contentDescription="@string/view_greeting_onboarding_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.229"
+        app:srcCompat="@drawable/logo_my_story_app_full" />
+
+    <TextView
+        android:id="@+id/greeting_menu_first"
+        style="@style/TextContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:gravity="center_horizontal"
+        android:text="@string/greeting_menu_1"
+        app:layout_constraintEnd_toEndOf="@+id/image_view_onboarding"
+        app:layout_constraintStart_toStartOf="@+id/image_view_onboarding"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_onboarding" />
+
+
+    <ImageView
+        android:id="@+id/image_view_onboarding_2"
+        android:layout_width="0dp"
+        android:layout_height="290dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/loving_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+
+    <TextView
+        android:id="@+id/greeting_menu_second"
+        style="@style/TextContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:gravity="center_horizontal"
+        android:text="@string/greeting_menu_2"
+        app:layout_constraintEnd_toEndOf="@+id/image_view_onboarding_2"
+        app:layout_constraintStart_toStartOf="@+id/image_view_onboarding_2"
+        app:layout_constraintTop_toBottomOf="@+id/image_view_onboarding_2" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/first_menu"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/greeting_menu_first"
+        app:layout_constraintVertical_bias="0.892"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/second_menu"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:altSrc="@drawable/ic_full_circle"
+        app:layout_constraintBottom_toBottomOf="@+id/first_menu"
+        app:layout_constraintStart_toEndOf="@+id/first_menu"
+        app:layout_constraintTop_toTopOf="@+id/first_menu"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_circle"
+        app:tint="@color/purple_500" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        style="@style/ButtonPrimary"
+        android:layout_marginBottom="32dp"
+        android:alpha="0"
+        android:text="@string/start"
+        app:layout_constraintBottom_toTopOf="@+id/second_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

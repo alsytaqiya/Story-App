@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.login"
+    tools:context=".userinterface.loginofmyappstory.MainActivity">
+
+    <ImageView
+        android:id="@+id/image_view_main"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="122dp"
+        android:contentDescription="@string/view_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_view_main_1"
+        style="@style/TextHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:text="@string/my_story_app"
+        app:layout_constraintBottom_toBottomOf="@+id/image_view_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/image_view_main"
+        app:layout_constraintTop_toTopOf="@+id/image_view_main"
+        app:layout_constraintVertical_bias="0.492" />
+
+    <ImageView
+        android:id="@+id/ChibiMarukoChan2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/happy_chibby"
+        android:src="@drawable/happy_chibi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_main_2"
+        style="@style/TextContent.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="14dp"
+        android:text="@string/welcome_messages"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_main_1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/image_view_main"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_main_1" />
+
+    <com.dicoding.picodiploma.storyappsubmission.userinterface.customviewofmystoryapp.EditTheInputText
+        android:id="@+id/fill_email"
+        style="@style/TextContent.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="14dp"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="11dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:minHeight="43dp"
+        android:paddingStart="14dp"
+        android:textAlignment="viewStart"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_main_2"
+        app:layout_constraintStart_toStartOf="@+id/text_view_main_2"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_main_2"
+        tools:ignore="MissingConstraints,NotSibling,RtlSymmetry" />
+
+    <com.dicoding.picodiploma.storyappsubmission.userinterface.customviewofmystoryapp.PasswordInputText
+        android:id="@+id/fill_password"
+        style="@style/TextContent.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="14dp"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="11dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:minHeight="43dp"
+        android:paddingStart="14dp"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="@+id/fill_email"
+        app:layout_constraintStart_toStartOf="@+id/fill_email"
+        app:layout_constraintTop_toBottomOf="@+id/fill_email"
+        tools:ignore="MissingConstraints,RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_button"
+        style="@style/ButtonPrimary"
+        android:layout_gravity="center"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="14dp"
+        android:gravity="center"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="@+id/fill_password"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="@+id/fill_password"
+        app:layout_constraintTop_toBottomOf="@+id/fill_password" />
+
+    <LinearLayout
+        android:id="@+id/registrationAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/login_button"
+        app:layout_constraintStart_toStartOf="@+id/login_button"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:id="@+id/text_view_main_3"
+            style="@style/TextContent.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_account"/>
+
+        <TextView
+            style="@style/TextContent.registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/registration"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_login"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

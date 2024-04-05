@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userinterface.settingofmystoryapp.SettingAppUser">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_of_setting"
+        style="@style/card"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/TextTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"
+            android:gravity="center_vertical|start"
+            android:text="@string/setting"
+            android:textColor="@color/toolbar" />
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/frame_layout_setting"
+        style="@style/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/card_view_of_setting"
+        app:layout_constraintStart_toStartOf="@+id/card_view_of_setting"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_of_setting">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <FrameLayout
+                android:id="@+id/frame_layout_application_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    style="@style/TextContent"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_of_application"
+                    android:textStyle="bold" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame_layout_application_setting">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="9dp"
+                    android:contentDescription="@string/image_button"
+                    android:src="@drawable/ic_dark_mode" />
+
+                <TextView
+                    style="@style/TextContent.Small"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginTop="11dp"
+                    android:text="@string/theme_of_app" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/theme_mode_toggle"
+                    style="@style/TextContent.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginEnd="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.059"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card"
+                    app:layout_constraintVertical_bias="0.091"
+                    tools:ignore="RtlHardcoded" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/btn_languages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginEnd="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameTheme">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="14dp"
+                    android:contentDescription="@string/image_button"
+                    android:src="@drawable/ic_language" />
+
+                <TextView
+                    style="@style/TextContent.Small"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/language" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/btn_logout_from_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_languages">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="14dp"
+                    android:contentDescription="@string/image_button"
+                    android:src="@drawable/ic_logout" />
+
+                <TextView
+                    style="@style/TextContent.Small"
+                    android:layout_width="210dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/logout" />
+
+            </FrameLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_logout"
+        style="@style/cardView"
+        android:layout_width="375dp"
+        android:layout_height="145dp"
+        android:visibility="gone"
+        app:cardCornerRadius="21dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="382dp"
+            android:layout_height="152dp">
+
+            <TextView
+                android:id="@+id/text_view_logout_confirmation"
+                style="@style/TextContent.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="14dp"
+                android:text="@string/logout_confirmation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_clicking_yes"
+                style="@style/ButtonLogoutPrimary"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/rounded_rectangle"
+                android:text="@string/yes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_logout_confirmation"
+                tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_clicking_no"
+                style="@style/ButtonLogoutSecondary"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="14dp"
+                android:paddingLeft="36dp"
+
+                android:paddingRight="36dp"
+                android:text="@string/cancel"
+                android:textColor="@color/purple_500"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/button_clicking_yes"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_logout_confirmation"
+                tools:ignore="MissingConstraints,RtlHardcoded" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_logout"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

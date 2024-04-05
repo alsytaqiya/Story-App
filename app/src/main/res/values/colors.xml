@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#2155CD</color>
+    <color name="purple_500">#0AA1DD</color>
+    <color name="purple_700">#79DAE8</color>
+    <color name="teal_200">#E8F9FD</color>
+    <color name="teal_700">#191919</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_soft_hard">#949494</color>
+    <color name="grey_soft_light">#EBECF0</color>
+    <color name="toolbar">#42A9D2</color>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view_of_story_item"
+    style="@style/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="345dp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="12dp"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="18dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/story_photo_of_user"
+            android:layout_width="0dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="14dp"
+            android:contentDescription="@string/todo"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/name_of_user"
+            style="@style/TextContent"
+            android:layout_width="wrap_content"
+            android:layout_height="31sp"
+            android:layout_marginTop="20dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            card_view:layout_constraintEnd_toEndOf="@+id/story_photo_of_user"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="@+id/story_photo_of_user"
+            card_view:layout_constraintTop_toBottomOf="@+id/story_photo_of_user"
+            tools:ignore="RtlHardcoded"
+            tools:text="@string/name" />
+
+        <TextView
+            android:id="@+id/story_description"
+            style="@style/TextContent.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical|left"
+            android:maxLines="3"
+            card_view:layout_constraintEnd_toEndOf="@+id/name_of_user"
+            card_view:layout_constraintHorizontal_bias="0.0"
+            card_view:layout_constraintStart_toStartOf="@+id/name_of_user"
+            card_view:layout_constraintTop_toBottomOf="@+id/name_of_user"
+            tools:ignore="RtlHardcoded"
+            tools:text="@string/description" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
