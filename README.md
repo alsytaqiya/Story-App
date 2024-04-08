@@ -1,5 +1,3 @@
-
-https://github.com/alsytaqiya/Story-App/assets/93572947/2116b4ca-ef04-416e-8665-bcc2b9a935d6
 ## About
 StoryAppSubmission is an app built in Kotlin that implement intermediate level Android theories. This application is about making stories using camera or gallery with additional such as user login, theme and language setting.
 
@@ -54,4 +52,4 @@ These specifications represent some of the characteristics of one of this FindMe
    
 ## Demonstration
 Here is a video demonstration of StoryAppSubmission app:
-Uploading story app.mp4…
+https://github.com/alsytaqiya/Story-App/assets/93572947/2116b4ca-ef04-416e-8665-bcc2b9a935d6
